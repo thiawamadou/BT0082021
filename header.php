@@ -1,13 +1,11 @@
-<?php 
-include('connect/connect.php');
-
-?>
+<?php include('connect/connect.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Document</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
@@ -66,23 +64,11 @@ include('connect/connect.php');
 <div class="header">
 <a href="<?= RACINE_SITE;?>index.php"  class="logo">Home</a>
   <div class="header-right">
-  <a href="<?= RACINE_SITE;?>SignIn.php">inscription</a>
-  <a href="<?= RACINE_SITE;?>profil.php">voir mon profil</a>
-  <a href="<?= RACINE_SITE;?>logout.php">Deconnection</a></li>
+  <a href="<?= RACINE_SITE;?>SignIn.php">Inscription</a>
+  <a href="<?= RACINE_SITE;?>profil.php">Mon profile</a>
+  <a href="<?= RACINE_SITE;?>logout.php">Deconnecxion</a></li>
   </div>
 </div>
-  <!--  <header>
-       
-       <ul id="nav">
-	<li></li>
-	<li><a href="<?= RACINE_SITE;?>LogIn.php">Seconnecter</a></li>
-	<li><a href="<?= RACINE_SITE;?>boutinque.php">Accees a la boutique</a></li>
-    <li><a href="<?= RACINE_SITE;?>profil.php">voir mon profil</a></li>
-    <li><a href="<?= RACINE_SITE;?>panier.php">voir nos panier</a></li>
-    <li><a href="<?= RACINE_SITE;?>logout.php">Deconnection</a></li>
-
-</ul> -->
-         </header>
    
         
     

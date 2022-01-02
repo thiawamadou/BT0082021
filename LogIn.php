@@ -32,7 +32,7 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password'])) {
         
         // Si user et password correspond 
         if (isset($_SESSION['id'])) {
-            header('Location: index.php');
+            header('Location: profil.php');
         } else {
             echo"erreur ";
         }
@@ -42,8 +42,9 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password'])) {
     }
  
  
-} else {
+} elseif(isset($_POST['submit'])) {
     echo '<span class="alert alert-danger" role="alert">Veuillez remplir les champs vides</span>';
+    
 }
 
 ?>
@@ -53,25 +54,23 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <div id="contain">
-        <form action="#" class="login" method="post">
-            <h1>Se Connecter</h1>
-            <Label>Pseudo</Label>
-            <input type="text" name="pseudo" id="log_email" >
-            <Label>Mot de Passe</Label>
-            <input type="password" name="password">
-
-            <input type="submit"  name="submit" value="LogIn">
-  
-        </form>
-    </div> 
-        </form>
-    </div> 
-</body>
-</html>
+<div id="contain">
+    
+<form action="#" class="login" method="post" >
+<h1>Se Connecter</h1>
+<Label>Pseudo</Label>
+<input type="text" name="pseudo" id="log_email" >
+<Label>Mot de Passe</Label>
+<input type="password" name="password">
+<input type="submit"  name="submit" value="LogIn">
+<p class="box-register">Vous êtes nouveau ici? <a href="SignIn.php">S'inscrire</a></p>
+</form>
+</div>
+</script>
 </body>
 </html>

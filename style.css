@@ -1,30 +1,13 @@
-/** HEADER*/
-/* *{ margin: 0; }
-a{ text-decoration: none; color: #000; }
-.conteneur{ margin: 0 auto; max-width: 1170px; }
-/**************************************************** HAUT ************************************************/
-/*header { background: #000000; padding: 5px; text-align: center; }
-header  span{ color: #fff; font-weight: bold; text-transform: uppercase; margin-right: 5%; }
-header  nav{ display: inline; }
-header  a{ color: #ffffff; text-decoration: none; padding: 5px; }
-header  nav  a:hover{ background: #04baf6; }
-/**************************************************** MILIEU ************************************************/
-/*section{ padding: 30px; min-height: 800px; }
-/**************************************************** BAS ************************************************/
-/*
-/**************************************************** GENERAL ************************************************/
-/*.erreur{ background: #ff0000; padding: 5px; margin: 5px; }
-.validation{ background: #669933; padding: 5px; margin: 5px; } */
-/**corps */
 body{
     background-color: #67be4b;
 }
-#contain{
+/*#contain{
     width: 400px;
     margin: 0 auto;
     margin-top: 10%;
-}
+}*/
 
+/*
 form{
     width: 100%;
     padding: 20px;
@@ -48,7 +31,7 @@ form{
 
 
 
-/* champs de formulaire */
+/* champs de formulaire 
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -58,7 +41,7 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-/* Boutton formulaire : submit */
+/* Boutton formulaire : submit 
 input[type=submit] {
     background-color: #53af57;
     color: white;
@@ -76,3 +59,4 @@ input[type=submit]:hover {
 input[type=submit].passwordoublier{
     background-color: chocolate;
 }
+*/

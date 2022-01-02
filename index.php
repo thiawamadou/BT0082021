@@ -6,14 +6,7 @@ if(!isset($_SESSION['username'])){
         }
     $sql =$pdo->prepare("SELECT * FROM users");
     $sql->execute();
-
-
-   
-
-  $row = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-
-
+    $row = $sql->fetchAll(PDO::FETCH_ASSOC);
 ?>
   <!-- Affichage de la liste des utilisateur-->
 <!DOCTYPE html>
@@ -26,7 +19,7 @@ if(!isset($_SESSION['username'])){
     <link rel="stylesheet" href="style.css" type="text/css">
      <style>
         body{
-    background-color: #696B6E;
+    background-color: #7f8182;
 }
 .container {  display: grid;
   grid-template-columns: 0.1fr 3fr;
@@ -53,9 +46,6 @@ if(!isset($_SESSION['username'])){
 .title { grid-area: title; }
 
 .content { grid-area: content; }
-
-
-
 
 /** Tableau */
 
