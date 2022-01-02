@@ -103,11 +103,11 @@ td{
   <div class="gloable">
         <div class="title">
             <div class="photo">
-                     <img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png" width="150px" height="200px"/>
+              <img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png" width="150px" height="200px"/>
 
              </div>
         <div class="inf">
-                <h1 class="alert-success">Bienvenue <?= $_SESSION['pseudo'] ;?> </h1>
+                <h1 class=" alert-success d-flex align-items-center" role="alert">Bienvenue <?= $_SESSION['pseudo'] ;?> </h1>
 
                 <p> <br> Voici vos information personnel</p>
         </div>

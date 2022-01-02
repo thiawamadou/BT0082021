@@ -17,7 +17,7 @@ require("./connect/connect.php");
     padding: 30px 25px 10px 25px;
     background: white;
     margin: 30px auto;
-    width: 400px;
+    width: 500px;
     box-shadow: 0 0 20px 0 ; 
   }
   h1.box-logo a {
@@ -35,7 +35,7 @@ require("./connect/connect.php");
   }
   .box-button {
     border-radius: 5px;
-    background: #1449db;
+    background: #53af57;
     text-align: center;
     cursor: pointer;
     font-size: 19px;
@@ -64,7 +64,7 @@ require("./connect/connect.php");
     margin-bottom: 25px;
     padding-left:10px;
     border-radius: 5px;
-    width: 390px;
+    width: 490px;
     height: 50px;
   }
   .box-input:focus {
@@ -95,13 +95,13 @@ require("./connect/connect.php");
 <h1 class="box-logo box-title"><a href="#"> Creation de compte Bootcamp PSEJ</a></h1>
 <h1 class="box-title">S'inscrire</h1>
 <form class="box" action="fichier/signin.php" method="post">
-<input type="text" class="box-input" name="pseudo" maxlength="20" placeholder="votre pseudo"required="required">
-<input type="text" name="nom" class="box-input" placeholder="votre Nom" required> <br><br>
-<input type="text" name="prenom" class="box-input" placeholder="votre prénom" required> <br><br>
-<input type="text" name="email" class="box-input" placeholder="adresse mail" required> <br><br>
-<input type="password" name="passwords" class="box-input" placeholder="mot de passe" required> <br><br>
+<input type="text" class="box-input" name="pseudo" maxlength="20" placeholder="Nom d'utilisateur"required="required">
+<input type="text" name="nom" class="box-input" placeholder="Nom" required> <br><br>
+<input type="text" name="prenom" class="box-input" placeholder="Prénom" required> <br><br>
+<input type="text" name="email" class="box-input" placeholder="Adresse mail" required> <br><br>
+<input type="password" name="passwords" class="box-input" placeholder="Mot de passe" required> <br><br>
 <input type="password" name="password_confirm" class="box-input" placeholder="Confirmer votre mot de passe" required><br/>
-<input type="text" class="box-input" name="ville" placeholder="votre ville" pattern="[a-zA-Z0-9-_.]{5,15}" title="caractères acceptés : a-zA-Z0-9-_."><br><br> 
+<input type="text" class="box-input" name="ville" placeholder="Ville" pattern="[a-zA-Z0-9-_.]{5,15}" title="caractères acceptés : a-zA-Z0-9-_."><br><br> 
 <input type="submit" class="box-button" value="S'inscrire">
 <p class="box-register">Déjà inscrit? <a href="LogIn.php">Connectez-vous ici</a></p>
 

@@ -63,11 +63,9 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password'])) {
     
 <form action="#" class="login" method="post" >
 <h1>Se Connecter</h1>
-<Label>Pseudo</Label>
-<input type="text" name="pseudo" id="log_email" >
-<Label>Mot de Passe</Label>
-<input type="password" name="password">
-<input type="submit"  name="submit" value="LogIn">
+<input type="text" name="pseudo" id="log_email" placeholder="Votre nom d'utilisateur">
+<input type="password" name="password" placeholder="Votre mot de passe">
+<input type="submit"  name="submit" value="LogIn" >
 <p class="box-register">Vous êtes nouveau ici? <a href="SignIn.php">S'inscrire</a></p>
 </form>
 </div>

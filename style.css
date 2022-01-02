@@ -1,13 +1,11 @@
 body{
     background-color: #67be4b;
 }
-/*#contain{
+#contain{
     width: 400px;
     margin: 0 auto;
     margin-top: 10%;
-}*/
-
-/*
+}
 form{
     width: 100%;
     padding: 20px;
@@ -31,7 +29,7 @@ form{
 
 
 
-/* champs de formulaire 
+/* champs de formulaire */
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -41,7 +39,7 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-/* Boutton formulaire : submit 
+/* Boutton formulaire : submit */
 input[type=submit] {
     background-color: #53af57;
     color: white;
@@ -59,4 +57,3 @@ input[type=submit]:hover {
 input[type=submit].passwordoublier{
     background-color: chocolate;
 }
-*/
