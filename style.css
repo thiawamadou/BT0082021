@@ -1,0 +1,78 @@
+/** HEADER*/
+/* *{ margin: 0; }
+a{ text-decoration: none; color: #000; }
+.conteneur{ margin: 0 auto; max-width: 1170px; }
+/**************************************************** HAUT ************************************************/
+/*header { background: #000000; padding: 5px; text-align: center; }
+header  span{ color: #fff; font-weight: bold; text-transform: uppercase; margin-right: 5%; }
+header  nav{ display: inline; }
+header  a{ color: #ffffff; text-decoration: none; padding: 5px; }
+header  nav  a:hover{ background: #04baf6; }
+/**************************************************** MILIEU ************************************************/
+/*section{ padding: 30px; min-height: 800px; }
+/**************************************************** BAS ************************************************/
+/*
+/**************************************************** GENERAL ************************************************/
+/*.erreur{ background: #ff0000; padding: 5px; margin: 5px; }
+.validation{ background: #669933; padding: 5px; margin: 5px; } */
+/**corps */
+body{
+    background-color: #67be4b;
+}
+#contain{
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+form{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #030303;
+    box-shadow: 0 0 20px 0 ;
+}
+
+#contain h1{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.login{
+    background-color: rgb(231, 231, 243);
+}
+
+#contain>form>p{
+    text-align: center;
+}
+
+
+
+/* champs de formulaire */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Boutton formulaire : submit */
+input[type=submit] {
+    background-color: #53af57;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+}
+input[type=submit].passwordoublier{
+    background-color: chocolate;
+}
