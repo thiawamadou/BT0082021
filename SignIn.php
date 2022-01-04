@@ -9,21 +9,31 @@ require("./connect/connect.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>inscription</title>
+    <link rel="icon" href="img/img1.jpeg">
+
    <!-- <link rel="stylesheet" href="style.css">-->
     <style>
+body{
+  background-image:url(img/img2.jpg);
+  /*background-image:url(img/img5.png);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .box {
+ 
     border: 1px solid #c4c4c4;
     padding: 30px 25px 10px 25px;
-    background: white;
+    background: #ccc ;
+    
     margin: 30px auto;
-    width: 500px;
+    width: 400px;
     box-shadow: 0 0 20px 0 ; 
   }
   h1.box-logo a {
     text-decoration:none;
   }
-  h1.box-title {
+  h1.box-title  {
     color: #AEAEAE;
     background: #f8f8f8;
     font-weight: 300;
@@ -33,9 +43,13 @@ require("./connect/connect.php");
     text-align:center;
     margin: -27px -26px 26px;
   }
+  .box-title a{
+    text-decoration: none;
+  }
   .box-button {
+    
     border-radius: 5px;
-    background: #53af57;
+    background: #6088f8;
     text-align: center;
     cursor: pointer;
     font-size: 19px;
@@ -64,7 +78,7 @@ require("./connect/connect.php");
     margin-bottom: 25px;
     padding-left:10px;
     border-radius: 5px;
-    width: 490px;
+    width: 95%;
     height: 50px;
   }
   .box-input:focus {
@@ -86,15 +100,33 @@ require("./connect/connect.php");
       color: #FFFFFF;
       border-radius: 3px;
   }
+  /* Boutton formulaire : submit */
+input[type=submit] {
+    background-color: #6088f8;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: #6088f8;
+    border: 1px solid #6088f8;
+}
+input[type=submit].passwordoublier{
+    background-color: chocolate;
+}
     </style>
 
 </head>
 <body>
 <section>
 <div class="container">
-<h1 class="box-logo box-title"><a href="#"> Creation de compte Bootcamp PSEJ</a></h1>
-<h1 class="box-title">S'inscrire</h1>
 <form class="box" action="fichier/signin.php" method="post">
+<h1 class="box-logo box-title"><a href="#"> Creation de compte Bootcamp PSEJ</a></h1>
+<h1 class="box-title">S'inscrire / <a href="Login.php">Se connecter</a></h1>
 <input type="text" class="box-input" name="pseudo" maxlength="20" placeholder="Nom d'utilisateur"required="required">
 <input type="text" name="nom" class="box-input" placeholder="Nom" required> <br><br>
 <input type="text" name="prenom" class="box-input" placeholder="Prénom" required> <br><br>
@@ -108,9 +140,7 @@ require("./connect/connect.php");
 </form>
 </div>
 </section>
-   <!--  <footer>
-        <p>footer</p>
-        <p><a href="#">deconnection</a></p>
-    </footer> -->
+
+<?php //require('footer.php');?> 
 </body>
 </html>

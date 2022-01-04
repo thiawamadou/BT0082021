@@ -6,26 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Document</title>
+    <title>ProjetBootcamp</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
-  .header {
-  overflow: hidden;
-  background-color: #C3C5C8;
-  padding: 20px 10px;
-}
+      .header {
+        overflow: hidden;
+        background-color: #C3C5C8;
+        padding: 5px 3px;
+      }
 
 /* Style the header links */
-.header a {
-  float: left;
-  color: #F6F8FC;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
-}
+      .header a {
+        float: left;
+        color: #F6F8FC;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+      }
 
 .header a.logo {
   font-size: 25px;
@@ -33,7 +33,7 @@
 }
 
 .header a:hover {
-  background-color: #ddd;
+  background-color: blue;
   color: black;
 }
 

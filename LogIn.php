@@ -55,13 +55,15 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Document</title>
+    <title>connexion</title>
+    <link rel="icon" href="img/img1.jpeg">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="contain">
-    
-<form action="#" class="login" method="post" >
+
+<div id="contain">   
+<form name="myform" action="#" class="login" method="post" onsubmit="return signin()">
 <h1>Se Connecter</h1>
 <input type="text" name="pseudo" id="log_email" placeholder="Votre nom d'utilisateur">
 <input type="password" name="password" placeholder="Votre mot de passe">
@@ -69,6 +71,28 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password'])) {
 <p class="box-register">Vous êtes nouveau ici? <a href="SignIn.php">S'inscrire</a></p>
 </form>
 </div>
+<script>/*
+    function signin(){
+    var pseudo = document.forms['myform']['pseudo'];
+    var passwords = document.forms['myform']['password'];
+
+    if(pseudo.value == ""){
+        alert("Mettez votre pseudo");
+        pseudo.focus();
+        return false;
+    }
+    if(passwords.value == ""){
+        alert("Mettez votre mot de passe");
+        passwords.focus();
+        return false;
+    }
+
+    return true
+    }
+    signin(); 
+    */           
 </script>
+
 </body>
+<?php require_once('footer.php');?> 
 </html>

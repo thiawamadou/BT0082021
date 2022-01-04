@@ -1,10 +1,31 @@
-body{
-    background-color: #67be4b;
-}
+
+body {
+    /* On met en place le fond d'écran */
+    /*background-color: #67be4b;*/
+    background-image:url(img/img5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 1024px;
+    /* On indique un redimensionnement proportionnel */
+    width: 100%;
+    height: auto;
+        /* L'image est positionnée en haut à gauche */
+        position: fixed;
+        top: 0;
+        left: 0;
+   }
+   @media screen and (max-width: 1024px) { /* Le traitement est ici spécifique à l'image */
+    body {
+    left: 50%;
+    margin-left: -512px; /* 50% */
+    }
+   }
 #contain{
     width: 400px;
     margin: 0 auto;
     margin-top: 10%;
+    
 }
 form{
     width: 100%;
@@ -26,9 +47,6 @@ form{
 #contain>form>p{
     text-align: center;
 }
-
-
-
 /* champs de formulaire */
 input[type=text], input[type=password] {
     width: 100%;
@@ -38,10 +56,9 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-
 /* Boutton formulaire : submit */
 input[type=submit] {
-    background-color: #53af57;
+    background-color: #6088f8;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -51,9 +68,10 @@ input[type=submit] {
 }
 input[type=submit]:hover {
     background-color: white;
-    color: #53af57;
-    border: 1px solid #53af57;
+    color: #6088f8;
+    border: 1px solid #6088f8;
 }
 input[type=submit].passwordoublier{
     background-color: chocolate;
 }
+

@@ -46,7 +46,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if($stmt->execute()){
                 // Password updated successfully. Destroy the session, and redirect to login page
                 session_destroy();
-                header("location: logIn.php");
+                echo("<div class='alert alert-success' role='alert'>
+                    <p>Vous avez modifié votre mot de passe avec succés  </p><hr>
+                    <p class='mb-0'>
+                        <a href='../Login.php'>Connecter</a> pour acceder à votre compte'
+                    </p>
+                </div>");
+                header('Refresh:6;url="logIn.php"');
+                //header("location: logIn.php");
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -95,4 +102,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </form>
     </div>    
 </body>
+<?php require_once('footer.php');?> 
 </html>

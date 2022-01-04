@@ -5,19 +5,17 @@ if(!isset($_SESSION['username'])){
     header('location:LogIn.php');
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil</title>
+  <link rel="icon" href="img/img1.jpeg">
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <style>
-        
+  <style>      
 /*****  tableau et contenu */
-
-
 body{
     background-color: #94979B;
 }
@@ -96,23 +94,23 @@ td{
     border: 1px solid black;
 
 }
+
 </style>
     </head>
     <body>
     <div class="container">
-  <div class="gloable">
-        <div class="title">
-            <div class="photo">
-              <img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png" width="150px" height="200px"/>
-
-             </div>
+    <div class="gloable">
+    <div class="title">
+      <div class="photo">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png" width="150px" height="200px"/>
+        </div>
         <div class="inf">
-                <h1 class=" alert-success d-flex align-items-center" role="alert">Bienvenue <?= $_SESSION['pseudo'] ;?> </h1>
-
-                <p> <br> Voici vos information personnel</p>
-        </div>
-        </div>
-    
+          <h1 class=" alert alert-success d-flex align-items-center" role="alert">
+            Bienvenue <?= $_SESSION['pseudo'] ;?> 
+          </h1>
+          <p> <br> Voici vos information personnel</p>
+    </div>
+    </div>
     <div class="content" >
   <table>
     <tr>
@@ -135,10 +133,8 @@ td{
 </div>
     <div>
 
-   <a href="<?= RACINE_SITE;?>resetPassword.php"><input type="button" value="Mot de passe oublier?">
-           
-            </a>
-    <a href="<?= RACINE_SITE;?>drop.php"><input type="button" value="Log out" ></a>
+   <a href="<?= RACINE_SITE;?>resetPassword.php"><input type="button" class='passwordoublier' value="Mot de passe oublier?"></a>
+    <a href="<?= RACINE_SITE;?>drop.php"><input type="button" class='input-drop' value="Deconnexion" ></a>
     </div>
     </div>
   </div>

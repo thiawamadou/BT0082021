@@ -20,5 +20,6 @@ if(isset($_SESSION['username'])){
     }
 
 ?>
+<?php require_once('footer.php');?> 
 </body>
 </html>

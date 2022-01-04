@@ -24,7 +24,7 @@ $ville = $_POST['ville'];
 
 
 $sql = "INSERT INTO users(id, pseudo, mdp, nom, prenom, email, ville ) 
-        VALUES(':id','$pseudo', '$mdp', '$nom', '$prenom', '$email','$ville')";
+        VALUES(':id','$pseudo', '".hash('sha256', $mdp)."', '$nom', '$prenom', '$email','$ville')";
 $stmt= $pdo->prepare($sql);
 
  try {
