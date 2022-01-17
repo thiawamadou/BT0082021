@@ -1,6 +1,6 @@
 <?php 
-//require('header.php');
-require("./connect/connect.php");
+require('header.php');
+//require("./connect/connect.php");
 ?>
 
 <!DOCTYPE html>
@@ -11,24 +11,25 @@ require("./connect/connect.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inscription</title>
     <link rel="icon" href="img/img1.jpeg">
-
    <!-- <link rel="stylesheet" href="style.css">-->
     <style>
 body{
-  background-image:url(img/img2.jpg);
+  background-image:url(img/bibliotec.jpg);
   /*background-image:url(img/img5.png);*/
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
+    min-height: 100%;
+    min-width: 1024px;
 }
 .box {
  
     border: 1px solid #c4c4c4;
     padding: 30px 25px 10px 25px;
-    background: #ccc ;
+    background: #7e8085 ;
     
     margin: 30px auto;
     width: 400px;
-    box-shadow: 0 0 20px 0 ; 
+    box-shadow: 0 0 40px 0 ; 
   }
   h1.box-logo a {
     text-decoration:none;
@@ -125,15 +126,15 @@ input[type=submit].passwordoublier{
 <section>
 <div class="container">
 <form class="box" action="fichier/signin.php" method="post">
-<h1 class="box-logo box-title"><a href="#"> Creation de compte Bootcamp PSEJ</a></h1>
+<h1 class="box-logo box-title"><a href="#"> Creation de compte </a></h1>
 <h1 class="box-title">S'inscrire / <a href="Login.php">Se connecter</a></h1>
-<input type="text" class="box-input" name="pseudo" maxlength="20" placeholder="Nom d'utilisateur"required="required">
-<input type="text" name="nom" class="box-input" placeholder="Nom" required> <br><br>
-<input type="text" name="prenom" class="box-input" placeholder="Prénom" required> <br><br>
-<input type="text" name="email" class="box-input" placeholder="Adresse mail" required> <br><br>
-<input type="password" name="passwords" class="box-input" placeholder="Mot de passe" required> <br><br>
-<input type="password" name="password_confirm" class="box-input" placeholder="Confirmer votre mot de passe" required><br/>
-<input type="text" class="box-input" name="ville" placeholder="Ville" pattern="[a-zA-Z0-9-_.]{5,15}" title="caractères acceptés : a-zA-Z0-9-_."><br><br> 
+<input type="text" class="box-input" name="pseudo" maxlength="20" placeholder="Nom d'utilisateur" pattern="[a-zA-Z0-9-_.]{3,20}" title="caractères acceptés: a-zA-Z0-9-_. compris entre 3-20 caratère ">
+<input type="text" name="nom" class="box-input" placeholder="Nom" required> <br>
+<input type="text" name="prenom" class="box-input" placeholder="Prénom" required> <br>
+<input type="email" name="email" class="box-input" placeholder="Adresse mail" required> <br>
+<input type="password" name="passwords" class="box-input" placeholder="Mot de passe" required> <br>
+<!--<input type="password" name="password_confirm" class="box-input" placeholder="Confirmer votre mot de passe" required>-->
+<!--<input type="text" class="box-input" name="ville" placeholder="Ville" pattern="[a-zA-Z0-9-_.]{5,15}" title="caractères acceptés : a-zA-Z0-9-_.">-->
 <input type="submit" class="box-button" value="S'inscrire">
 <p class="box-register">Déjà inscrit? <a href="LogIn.php">Connectez-vous ici</a></p>
 
@@ -141,6 +142,6 @@ input[type=submit].passwordoublier{
 </div>
 </section>
 
-<?php //require('footer.php');?> 
+<?php require('footer.php');?> 
 </body>
 </html>

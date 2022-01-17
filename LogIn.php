@@ -1,8 +1,5 @@
+<?php   require_once('header.php'); ?>
 <?php 
-//require('header.php');
-require_once('header.php');
-
-
 // verificfication si le formulaire remplie par l'utilisateur n'est pas vide
 if(!empty($_POST['pseudo']) && !empty($_POST['password'])) {
   // on recupere le formulaire emplie
@@ -12,6 +9,7 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password'])) {
     $select = $pdo->prepare("SELECT * FROM users WHERE pseudo = :username");
     $select->execute(array(
         ':username' => $username
+        
     ));
     $row = $select->fetch();
     // recuperatioon du username et password de la bdd
@@ -28,11 +26,9 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password'])) {
         $_SESSION['admin'] = $row['admin'];
 
 
-
-        
         // Si user et password correspond 
         if (isset($_SESSION['id'])) {
-            header('Location: profil.php');
+            header('Location: index.php');
         } else {
             echo"erreur ";
         }
@@ -48,51 +44,39 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password'])) {
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>connexion</title>    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>connexion</title>
-    <link rel="icon" href="img/img1.jpeg">
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/styleLogin.css">
 </head>
 <body>
-
-<div id="contain">   
-<form name="myform" action="#" class="login" method="post" onsubmit="return signin()">
-<h1>Se Connecter</h1>
-<input type="text" name="pseudo" id="log_email" placeholder="Votre nom d'utilisateur">
-<input type="password" name="password" placeholder="Votre mot de passe">
-<input type="submit"  name="submit" value="LogIn" >
-<p class="box-register">Vous êtes nouveau ici? <a href="SignIn.php">S'inscrire</a></p>
-</form>
-</div>
-<script>/*
-    function signin(){
-    var pseudo = document.forms['myform']['pseudo'];
-    var passwords = document.forms['myform']['password'];
-
-    if(pseudo.value == ""){
-        alert("Mettez votre pseudo");
-        pseudo.focus();
-        return false;
-    }
-    if(passwords.value == ""){
-        alert("Mettez votre mot de passe");
-        passwords.focus();
-        return false;
-    }
-
-    return true
-    }
-    signin(); 
-    */           
-</script>
-
+    <div id="contain">   
+        <div class="divimage" style="float:left;" >
+            <img src="img/img_signin2.png" />
+            <h3 id="titre">Ma Biblioteque</h3>
+        </div>
+        <form name="myform" action="#" class="login" method="post">  
+            <h1>Se Connecter</h1>
+            <input type="text" name="pseudo" id="log_email" placeholder="Votre nom d'utilisateur">
+            <input type="password" name="password" placeholder="Votre mot de passe">
+            <input type="submit"  name="submit" value="Connexion" >
+            <a href="<?= RACINE_SITE;?>resetPassword.php">Mot de passe oublier?</a>
+            <p class="box-register">Vous êtes nouveau ici? <a href="SignIn.php">S'inscrire</a></p>
+        </form>
+    </div>
+    <main> <h1>Voir les oeuvres</h1></main>
+    <div id="contain2" >
+        
+        <img src="img/mes_livres.png" alt="" width="100px" height="100px" >
+        <img src="img/mes_livres2.png" alt="" width="100px" height="100px">
+        <img src="img/mes_livres3.png" alt="" width="100px" height="100px" >
+    </div>
 </body>
-<?php require_once('footer.php');?> 
+
 </html>
+<?php include('footer.php');?> 

@@ -8,46 +8,50 @@
   <title>Document</title>
 </head>
 <body>
-  
-
 <?php
 include_once('../connect/connect.php');
 /*INITIALISATION*/
-
+if($_POST){
 $id = null;
 $pseudo= $_POST['pseudo'];
 $mdp= $_POST['passwords'];
 $prenom= $_POST['prenom'];
 $nom = $_POST['nom'];
 $email= $_POST['email'];
-$ville = $_POST['ville'];
+//$ville = $_POST['ville'];
 
-
-$sql = "INSERT INTO users(id, pseudo, mdp, nom, prenom, email, ville ) 
-        VALUES(':id','$pseudo', '".hash('sha256', $mdp)."', '$nom', '$prenom', '$email','$ville')";
-$stmt= $pdo->prepare($sql);
-
- try {
+  $verif_caractere = preg_match('/^[A-Za-z][A-Za-z0-9]*(?:_+[A-Za-z0-9]+)*$/', $_POST['pseudo']);
+  if(!$verif_caractere && (strlen($_POST['pseudo']) < 1 || strlen($_POST['pseudo']) > 20) ){
+    echo "<div class='erreur'>Le pseudo doit contenir entre 1 et 20 caractères. <br>
+  Caractère accepté : Lettre de A à Z et chiffre de 0 à 9</div>";
+  }
+  $stmt = $pdo->prepare("SELECT * FROM users WHERE pseudo=?");
+  $stmt->execute([$pseudo]); 
+  $user = $stmt->fetch();
+  if ($user) {
+    echo  " <div class='alert alert-dange' role='alert'>Ce nom d'utilisateur existe déjà 
+      <strong> Veuillez s'il vous plait utiliser un autre nom d'utilisateur</strong></div>";
+    header('Refresh:2;url="../SignIn.php"');
+} else {
+  $sql = "INSERT INTO users(id, pseudo, mdp, nom, prenom, email) 
+  VALUES(':id','$pseudo', '$mdp', '$nom', '$prenom', '$email')";
+  $stmt= $pdo->prepare($sql);
     // si l'utlisateur arvient a s'inscrire -> redirection vers login
   $stmt->execute();
   echo("<div class='alert alert-success' role='alert'>
           <h4 class='alert-heading'>Bien venu!</h4>
           <p>
             Vous avez créé un compte avec succés 
-            Merci d'etre compter parmi les membre du psej.
+           <strong> Le psej vous souhaite le bienvenu.</strong>
           </p><hr>
           <p class='mb-0'>
-            Assurez-vous que vou n'avez pas oublier votre nom d'utilisateur
+            Assurez-vous que vous n'avez pas oublier votre nom d'utilisateur
             et mot de passe. <a href='../Login.php'>Connecter</a> pour acceder à votre compte'
           </p>
       </div>");
-  header('Refresh:20;url="../profil.php"');
-
-} catch (\Throwable $th) {
-    //throw $th;
-    echo 'erreur ' . $th;
+  header('Refresh:8;url="../Login.php"');
+} 
 }
-
 ?>
 </body>
 </html>

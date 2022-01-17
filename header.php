@@ -1,13 +1,15 @@
 <?php include('connect/connect.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+
     <title>ProjetBootcamp</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
       .header {
         overflow: hidden;
@@ -16,7 +18,11 @@
       }
 
 /* Style the header links */
-      .header a {
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+.header a {
         float: left;
         color: #F6F8FC;
         text-align: center;
@@ -27,27 +33,23 @@
         border-radius: 4px;
       }
 
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
 .header a:hover {
   background-color: blue;
-  color: black;
+  color: #ffff00;
+  transition: 0.7s;
+  text-decoration: none;
 }
 
 .header a.active {
   background-color: dodgerblue;
-  color: white;
+  color: blue;
 }
-
 
 .header-right {
   float: right;
 }
  /** Responsive screen */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   .header a {
     float: none;
     display: block;
@@ -60,15 +62,17 @@
     </style>
 </head>
 <body>
-  
+
 <div class="header">
-<a href="<?= RACINE_SITE;?>index.php"  class="logo">Home</a>
+<a class="fa fa-home" href="<?= RACINE_SITE;?>index.php"  class="logo">Home</a>
+
   <div class="header-right">
   <a href="<?= RACINE_SITE;?>SignIn.php">Inscription</a>
   <a href="<?= RACINE_SITE;?>profil.php">Mon profile</a>
   <a href="<?= RACINE_SITE;?>logout.php">Deconnecxion</a></li>
   </div>
 </div>
-   
-        
+</body>
+</html>
+
     

@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +15,9 @@ if(isset($_SESSION['username'])){
     // redirection vers la page login
     header('Refresh:4;url="logIn.php"');
     }else {
-        header('Location:../profile.php');
+        header('Location: Login.php');
+        echo"<div class='alert alert-danger' role='alert'>
+    Vous êtes déja déconnecter avec succés! </div>";
     }
 
 ?>

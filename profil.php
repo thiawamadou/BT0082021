@@ -3,33 +3,26 @@
 require_once('header.php');
 if(!isset($_SESSION['username'])){
     header('location:LogIn.php');
+    echo "Veuillez-vous connecter d'abord pour voir votre profile";
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profil</title>
-  <link rel="icon" href="img/img1.jpeg">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
   <style>      
 /*****  tableau et contenu */
 body{
-    background-color: #94979B;
+    /*background-color: #94979B;*/
+    background-image:url(img/img9.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.container {  display: grid;
-  grid-template-columns: 0.1fr 2fr;
-  grid-template-rows: 3.4fr 0.5fr ;
-  grid-auto-columns: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". gloable"
-    ". ."
-    ". .";
-}
+
 
 .gloable {  display: grid;
   grid-template-columns: 1fr 0.1fr ;
@@ -65,8 +58,7 @@ body{
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "table table table"
-    ;
+    "table table table";
   grid-area: content;
 }
 
@@ -87,6 +79,7 @@ table{
 th{
     border: 1px solid black;
     padding-top: 0px;
+    background: #827f7c;
 
 }
 
@@ -103,15 +96,13 @@ td{
     <div class="title">
       <div class="photo">
         <img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png" width="150px" height="200px"/>
-        </div>
-        <div class="inf">
-          <h1 class=" alert alert-success d-flex align-items-center" role="alert">
-            Bienvenue <?= $_SESSION['pseudo'] ;?> 
-          </h1>
-          <p> <br> Voici vos information personnel</p>
+      </div>
+      <div class="inf">
+          <h1 class=" alert alert-success d-flex align-items" role="alert"> Bienvenue <?= $_SESSION['pseudo'];?> </h1> 
     </div>
     </div>
     <div class="content" >
+    <h4>Voici vos information personnel: </h4>
   <table>
     <tr>
         <th>Id</th>
@@ -123,7 +114,7 @@ td{
     </tr>
     <tr>
         <td><?= $_SESSION['id'] ;?></td>
-        <td><?= $_SESSION['pseudo'] ;?></td>
+        <td><?= $_SESSION['username'] ;?></td>
         <td><?= $_SESSION['username'] ;?></td>
         <td><?= $_SESSION['nom'] ;?></td>
         <td><?= $_SESSION['email'] ;?></td>
@@ -131,17 +122,14 @@ td{
     </tr>
   </table>
 </div>
-    <div>
-
-   <a href="<?= RACINE_SITE;?>resetPassword.php"><input type="button" class='passwordoublier' value="Mot de passe oublier?"></a>
-    <a href="<?= RACINE_SITE;?>drop.php"><input type="button" class='input-drop' value="Deconnexion" ></a>
-    </div>
-    </div>
-  </div>
+    
+</div>
+</div>
 </div>
   
-   
-    
+</body>
+
+</html>
 <?php 
 include_once('footer.php');
 ?>
